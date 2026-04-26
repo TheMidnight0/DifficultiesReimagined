@@ -16,7 +16,7 @@ DRSprite* DRSprite::createFromLevel(GJGameLevel* level) {
         else if (alwaysUseReq) stars = level->m_starsRequested;
         if (stars == 10 && level->m_stars > 0); // These should be demon switch in the future.
 
-        if (ret->initWithFile(std::format("DR_difficulty{}_short.png"_spr, stars).c_str())) {
+        if (ret->initWithFile(fmt::format("DR_difficulty{}_short.png"_spr, stars).c_str())) {
             ret->autorelease();
             return ret;
         }
@@ -30,7 +30,7 @@ DRSprite* DRSprite::createFromStars(int stars) {
     DRSprite* ret = new DRSprite();
 
     if (ret) {
-        if (ret->initWithFile(std::format("DR_difficulty{}_short.png"_spr, stars).c_str())) {
+        if (ret->initWithFile(fmt::format("DR_difficulty{}_short.png"_spr, stars).c_str())) {
             ret->autorelease();
             return ret;
         }
