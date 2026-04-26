@@ -11,6 +11,26 @@
 	"version": "v0.1.0",
 	"developer": "Midnight",
 	"description": "Adds more difficulties! Like, a LOT more difficulties!",
+	"settings": {
+		"use-req-difficulty": {
+			"type": "bool",
+			"name": "Use Requested Difficulty",
+			"description": "When level has no rate instead of Robtop's average difficulty will be used requested by creator difficulty.",
+			"default": false
+		},
+		"always-use-req-difficulty": {
+			"type": "bool",
+			"name": "Always Use Requested Difficulty",
+			"description": "Requested difficulty will be used even on rated levels (this does not affect rewards).",
+			"default": false,
+			"enable-if": "setting:use-req-difficulty"
+		}
+	},
+	"resources": {
+		"sprites": [
+			"resources/DifficultySheet/*.png"
+		]
+	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
 	}
