@@ -9,7 +9,7 @@ class $modify(LevelInfoLayerHook, LevelInfoLayer) {
 		if (!LevelInfoLayer::init(level, challenge)) return false;
 
 		if (CCSprite* child = static_cast<CCSprite*>(this->getChildByIDRecursive("difficulty-sprite"))) {
-			DRSprite* face = DRSprite::createFromLevel(level);
+			DRSprite* face = DRSprite::createFromLevel(level, Short);
 
 			if (face) {
 				child->setOpacity(0);

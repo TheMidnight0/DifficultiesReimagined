@@ -8,9 +8,9 @@
 	},
 	"id": "midnight.difficulties-reimagined",
 	"name": "Difficulties Reimagined",
-	"version": "v0.1.0",
+	"version": "v0.2.0",
 	"developer": "Midnight",
-	"description": "Adds more difficulties! Like, a LOT more difficulties!",
+	"description": "Adds more difficulties! Like, a LOT more!",
 	"settings": {
 		"use-req-difficulty": {
 			"type": "bool",
@@ -27,9 +27,11 @@
 		}
 	},
 	"resources": {
-		"sprites": [
-			"resources/DifficultySheet/*.png"
-		]
+		"spritesheets": {
+			"DifficultySheet": [
+				"resources/DifficultySheet/*.png"
+			]
+		}
 	},
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"

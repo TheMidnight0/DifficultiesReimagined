@@ -9,7 +9,7 @@ class $modify(MapPackCellHook, MapPackCell) {
 		MapPackCell::loadFromMapPack(pack);
 
 		if (CCSprite* child = this->getChildByType<CCSprite>(0)) {
-			DRSprite* face = DRSprite::createFromStars(pack->m_stars);
+			DRSprite* face = DRSprite::createFromStars(pack->m_stars, Short);
 
 			if (face) {
 				child->setOpacity(0);
